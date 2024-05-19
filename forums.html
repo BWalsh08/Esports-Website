@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Forum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .forum-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .post-form {
+            margin-bottom: 20px;
+        }
+        .post-form input, .post-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .post-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .post-form button:hover {
+            background-color: #218838;
+        }
+        .post-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .post {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .post h3 {
+            margin: 0 0 10px;
+        }
+        .post p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ESports News</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="games.html">Games</a>
+        <a href="video.html">Clips</a>
+        <a href="forums.html">Forums</a>
+    </nav>
+    <div class="container">
+        <div class="forum-header">
+            <h1>Interactive Forum</h1>
+        </div>
+        <div class="post-form">
+            <input type="text" id="username" placeholder="Your Name">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+        <ul class="post-list" id="postList">
+            <!-- Posts will be dynamically added here -->
+        </ul>
+    </div>
+
+</body>
+</html>
+
+<script src="scripts.js"></script>
