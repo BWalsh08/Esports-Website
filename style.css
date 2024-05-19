@@ -3,6 +3,66 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Forum Style Start*/
+
+body .forum {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #454343;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.forum-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.post-form {
+    margin-bottom: 20px;
+}
+.post-form input, .post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.post-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.post-form button:hover {
+    background-color: #218838;
+}
+.post-list {
+    list-style-type: none;
+    padding: 0;
+}
+.post {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+.post h3 {
+    margin: 0 0 10px;
+}
+.post p {
+    margin: 0;
+}
+
+/* Forum Style End */
 header {
     background-color: #333;
     color: #fff;
