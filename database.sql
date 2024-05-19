@@ -35,7 +35,7 @@ mysql -u root -p
 
 <?php
 $servername = "localhost";
-$username = "";
+$username = "Brennan";
 $password = "BrenWal123";
 $dbname = "forum";
 
@@ -48,3 +48,28 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 ?>
+
+<?php
+$sql = "INSERT INTO users (username, password, email) VALUES ('john_doe', 'password123', 'john@example.com')";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+?>
+
+<?php
+$sql = "SELECT id, username, email FROM users";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["username"]. " - Email: " . $row["email"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+?>
+
+mysqldump -u root -p forum > forum_backup.sql
+
